@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: sans-serif;
+}
+
+.wrapper{
+  border: 1px red solid;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2em 0;
+}
+
+.heading{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 10em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.slider-section{
+  border: 1px red solid;
+  width: 100%;
+  position: relative;
+}
+
+.slider-section img{
+  width: 100%;
+  height: 40em;
+}
+
+.btn-container{
+  border: 1px red solid;
+  width: 100%;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+}
+.prev-btn, .next-btn{
+  font-size: 2rem;
+  cursor: pointer;
+}
+.random-btn{
+  display: block;
+  width: 100%;
+  max-width: 10em;
+  margin: 0 auto;
+  margin-top: 1em;
+  font-size: 1.5rem;
+  padding: 0.5em 0.8rem;
+  cursor: pointer;
 }
