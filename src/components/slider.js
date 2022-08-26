@@ -5,7 +5,6 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 function Slider (){
   const [imageIndex, setImageIndex] = useState(0);
   const { image, name } = reviews[imageIndex];
-  let timerId = null;
 
   const checkImage = (number) => {
     if(number > reviews.length-1){
@@ -34,7 +33,8 @@ function Slider (){
     setImageIndex(checkImage(anyImage));
   }
   useEffect(()=>{
-    timerId = setInterval(()=>{nextImage()},3000);
+    let timerId = setInterval(()=>{nextImage()},3000);
+    return () =>{clearInterval(timerId)}
     
 
   }, [imageIndex]);
